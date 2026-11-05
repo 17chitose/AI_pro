@@ -15,7 +15,28 @@ def pay():
 
 def charge():
   #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
-  pass #このpassは処理を書いた後消してよい。
+    charge_max = 10
+    check_charge = False
+    print(f"【チャージ機能】\nチャージ残高は {balance} 円です。")
+    for i in range(1,charge_max+1):
+        print(f"{i}: {i*1000}円")
+    num = input("チャージする金額を選択してください。(キャンセルする場合には 99 を入力)")
+
+    while True:
+        for i in range(1,charge_max+1):
+            if i == int(num):
+                check_charge = True
+    
+        if check_charge:
+            balance += int(num)*1000
+            print(f"チャージ残高は {balance} 円です。")
+            return balance
+        elif int(num) == 99:
+            print("チャージをキャンセルしました")
+            print(f"チャージ残高は {balance} 円です。")
+            return balance
+        else: 
+            num = input("正しい数値を入力してください。")
 
 
 def main():
