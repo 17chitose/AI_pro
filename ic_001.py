@@ -1,7 +1,28 @@
 def menu():
   #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
-  pass #このpassは処理を書いた後消してよい。
+  print("【ウチダ電鉄　交通系IC　カード検証システム】")
+  print("")
+  print("1：乗車機能選択")
+  print("2：チャージ機能選択")
+  print("")
 
+  judge = False
+
+  while  judge == False:
+    select_fanction = input("使用する機能を入力してください：")
+    if select_fanction == "1" or select_fanction == "１":
+      select_fanction = 1
+      judge = True
+    elif select_fanction == "2" or select_fanction == "２":
+      select_fanction = 2
+      judge = True
+    elif select_fanction == "99" or select_fanction == "９９":
+      select_fanction = 99
+      judge = True
+    else:
+       print("正しい数値を入力してください")
+  
+  return select_fanction
 
 def select_station():
   #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
@@ -55,5 +76,5 @@ def main():
   pay(500,4128)
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
