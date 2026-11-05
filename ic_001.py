@@ -73,7 +73,8 @@ def charge():
 
 
 def main():
-  pay(500,4128)
+  menu()
+  
 
 
 #if __name__ == "__main__":
