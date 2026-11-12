@@ -26,24 +26,33 @@ def menu():
 
 def select_station():
   #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
-  pass #このpassは処理を書いた後消してよい。
+  print("【乗車駅選択】")
+  print("")
+  print("1：秋葉原駅から　　133円")
+  print("2：山梨駅から　　4128円")
+  print("3：長野駅から　　7990円")
+  print("")
 
-
-def pay(balance, fare):
-  #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
-  if balance < fare:
-    print("残高不足です。")
-
-  while True:
-    charge_money = 3000
-
-    if balance < fare:
-       balance += 3000
-       print(f"{charge_money}円自動チャージします。")
+  judge = False
+  
+  while  judge == False:
+    select_station = input("乗車した駅を入力してください：")
+    if select_station == "1" or select_station == "１":
+      select_station = 1
+      judge = True
+    elif select_station == "2" or select_station == "２":
+      select_fanction = 2
+      judge = True
+    elif select_fanction == "99" or select_fanction == "９９":
+      select_fanction = 99
+      judge = True
     else:
-       balance -= fare
-       print(f"精算後のチャージ残高は{balance}円です。")
-       return balance
+      print("正しい数値を入力してください")
+
+
+def pay():
+  #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
+  pass #このpassは処理を書いた後消してよい。
 
 
 def charge():
@@ -73,7 +82,8 @@ def charge():
 
 
 def main():
-  pay(500,4128)
+  #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
+  pass #このpassは処理を書いた後消してよい。
 
 
 #if __name__ == "__main__":
