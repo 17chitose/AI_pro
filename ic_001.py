@@ -65,12 +65,25 @@ def select_station():
     elif select_station == 99:
       fare = 0
       return fare
-       
 
 
-def pay():
+def pay(balance, fare):
   #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
-  pass #このpassは処理を書いた後消してよい。
+  if balance < fare:
+    print("残高不足です。")
+
+  while True:
+    charge_money = 3000
+
+    if balance+500 < fare:
+       balance += 3000
+       print(f"{charge_money}円自動チャージします。")
+    else:
+       balance -= fare
+       print(f"精算後のチャージ残高は{balance}円です。")
+       return balance
+
+
 
 
 def charge():
