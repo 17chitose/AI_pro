@@ -34,6 +34,7 @@ def select_station():
   print("")
 
   judge = False
+  fare = 0
   
   while  judge == False:
     select_station = input("乗車した駅を入力してください：")
@@ -41,13 +42,30 @@ def select_station():
       select_station = 1
       judge = True
     elif select_station == "2" or select_station == "２":
-      select_fanction = 2
+      select_station = 2
       judge = True
-    elif select_fanction == "99" or select_fanction == "９９":
-      select_fanction = 99
+    elif select_station == "3" or select_station == "３":
+      select_station = 3
+      judge = True
+    elif select_station == "99" or select_station == "９９":
+      select_station = 99
       judge = True
     else:
       print("正しい数値を入力してください")
+
+    if select_station == 1:
+      fare = 133
+      return fare
+    elif select_station == 2:
+      fare = 4128
+      return fare
+    elif select_station == 3:
+      fare = 7990
+      return fare
+    elif select_station == 99:
+      fare = 0
+      return fare
+       
 
 
 def pay():
