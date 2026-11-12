@@ -91,7 +91,7 @@ def charge():
             balance += int(num)*1000
             print(f"チャージ残高は {balance} 円です。")
             return balance
-        elif int(num) == 99:
+        elif int(num) == 0:
             print("チャージをキャンセルしました")
             print(f"チャージ残高は {balance} 円です。")
             return balance
