@@ -108,7 +108,7 @@ def main():
       balance = pay(balance,fare)
     elif select_function == 2:
       balance = charge()
-    elif select_function == 99:
+    elif select_function == 0:
       break
 
 if __name__ == "__main__":
