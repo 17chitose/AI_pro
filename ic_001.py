@@ -82,9 +82,16 @@ def charge():
 
 
 def main():
-  #ここに処理の中身を書く。()カッコ内の引数はある場合は書く。
-  pass #このpassは処理を書いた後消してよい。
+  balance = 500
+  while True:
+    select_function = menu()
+    if select_function == 1:
+      fare = select_station()
+      balance = pay(balance,fare)
+    elif select_function == 2:
+      balance = charge()
+    elif select_function == 99:
+      break
 
-
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+    main()
